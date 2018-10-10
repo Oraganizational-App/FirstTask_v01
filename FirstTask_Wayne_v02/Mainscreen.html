@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Main Screen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Ubuntu:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/mainscreen.css">
+  </head>
+
+  <div class="logo">
+    <h1>FirstTask</h1>
+  </div>
+  <body>
+    <div class="tab_dropdown">
+      <button onclick="dropdown_function()" class="dropbtn">All Tasks</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">Calender</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">Important Tasks</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">Important Tasks</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">Notifications</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+
+    <div class="middle_bar" >
+      <h1>Personalized list</h1>
+    </div>
+
+    <div class="tab_dropdown">
+
+      <button onclick="dropdown_function()" class="dropbtn">Work</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">School</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">Home</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">Important Tasks</a>
+        </div>
+    </div>
+      <button onclick="dropdown_function()" class="dropbtn">Shopping list</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#placeholder">placeholder</a>
+        </div>
+    </div>
+
+  </body>
+
+  <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown_function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</html>
